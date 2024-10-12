@@ -1,5 +1,5 @@
 import cloneDeep from 'lodash.clonedeep';
-import { applyMiddleware } from './middleware';
+import applyMiddleware  from './middleware';
 
 const context = {
   env: {},

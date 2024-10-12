@@ -1,19 +1,20 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
+const path = require('path'); // Import path module
 
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: 'dist',
+    path: path.resolve(__dirname, 'dist'), // Update this line
     filename: 'index.js',
     library: 'refast',
     libraryTarget: 'umd',
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
-        loader: 'babel',
-        include: __dirname + '/src'
+        use: 'babel-loader',
+        include: path.resolve(__dirname, 'src') // Update this line
       }
     ]
   },
@@ -27,9 +28,10 @@ module.exports = {
     }
   },
   plugins: [
-    new webpack.optimize.DedupePlugin(),
+    // Remove DedupePlugin as it is no longer available
+    // new webpack.optimize.DedupePlugin(),
   ],
   resolve: {
-    extensions: ["", ".js", ".jsx"]
+    extensions: [".js", ".jsx"]
   }
 };
