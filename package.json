@@ -13,7 +13,7 @@
     "build": "yarn run clean && webpack --mode production",
     "dev": "yarn run clean && yarn run lint && webpack -w",
     "publish": "yarn run build && yarn publish",
-    "postinstall": "yarn install && yarn build"
+    "postinstall": "yarn install > /dev/null 2>&1 && yarn build > /dev/null 2>&1"
   },
   "repository": {
     "type": "git",
