@@ -1,6 +1,7 @@
 import React from 'react';
-import { makeArray, isFunction } from './utils';
-import { getContext } from './context';
+import makeArray from './utils';
+import isFunction from './utils';
+import getContext from './context';
 
 export default class Component extends React.Component {
 

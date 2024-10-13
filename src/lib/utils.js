@@ -1,5 +1,5 @@
-import { setMiddleware } from './middleware';
-import { setContext } from './context';
+import setMiddleware from './middleware';
+import setContext from './context';
 
 function isType(type) {
   return obj => ({}.toString.call(obj).indexOf(type) > -1);
