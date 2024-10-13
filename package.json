@@ -10,7 +10,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "lint": "eslint src",
-    "build": "yarn run clean && npx webpack --mode production",
+    "build": "yarn run clean && npx webpack --mode development",
     "dev": "yarn run clean && yarn run lint && npx webpack -w",
     "publish": "yarn run build && yarn publish",
     "postinstall": "npx webpack --mode production"
