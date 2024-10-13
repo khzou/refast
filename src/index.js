@@ -1,10 +1,10 @@
 import Component from './lib/Component';
 import PureComponent from './lib/PureComponent';
-import use from './lib/utils';
+import utils from './lib/utils';
 
 export default {
   Component,
   PureComponent,
-  use,
+  use: utils.use,
   setup: use,
 };
