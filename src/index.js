@@ -6,5 +6,5 @@ export default {
   Component,
   PureComponent,
   use: utils.use,
-  setup: use,
+  setup: utils.use,
 };
